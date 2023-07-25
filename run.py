@@ -1,13 +1,21 @@
 import random
 
+""" Creating the grid """
+
 
 def create_board(rows, cols):
     return [['O' for _ in range(cols)] for _ in range(rows)]
 
 
+""" printing out the board in the terminal """
+
+
 def print_board(board):
     for row in board:
         print(" ".join(row))
+
+
+""" placing the ships randomly on the board horizontally or vertically"""
 
 
 def place_ship(board, ship_size):
@@ -27,15 +35,23 @@ def place_ship(board, ship_size):
             board[row + i][col] = 'S'
 
 
+""" the user types in their guess """
+
+
 def get_guess(rows, cols):
     while True:
         try:
-            guess = input("Enter your guess (e.g., A5): \n").strip().upper()
+            guess = input("Enter your guess (e.g., A5): \n")
             col, row = ord(guess[0]) - ord('A'), int(guess[1:]) - 1
             if 0 <= row < rows and 0 <= col < cols:
                 return row, col
             else:
                 print("Invalid guess. Try again.\n")
+        except (ValueError, IndexError, TypeError):
+            print("Invalid guess. Try again.\n")
+
+
+""" the main function calling the board and ships function and loops until game over or user winning"""
 
 
 def play_battleship(rows, cols, num_ships):
@@ -68,14 +84,13 @@ def play_battleship(rows, cols, num_ships):
             print_board(board)
 
         if num_ships == 0:
-            print(
-                f"Good job! You sank all the battleships!\n")
+            print("Good job! You sank all the battleships!\n")
             break
     else:
-        print(f"Game Over! Try again.")
+        print("Game Over! Try again.")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     rows = 10
     cols = 10
     num_ships = min(
