@@ -1,32 +1,58 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships Game
 
-Welcome,
+![Mockup]
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+This is a classic Battleships game with 1 player only against the computer. I had fun making this game, however, due to the issues with Codeanywhere I had to work on this code offline in VS Code.
 
-## Reminders
+## How to Play
+1. The game board is set up with a grid of 10x10.
+2. 4 ships is placed on the board.
+3. The player inputs their guess by writing rows + column (e.g. "A6" or "C3")
+4. The player has 5 attempts to strike down the battleships.
+5. If the player runs out of attempts the game will close and show "Game over!".
+6. If the player wins the game will show "Good job! You won!"
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+## Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+1. 
+2. 
+3. 
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Future features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+1. 
+2. 
+3. 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+# Testing
 
-Connect your GitHub repository and deploy as normal.
+![Testing]
 
-## Constraints
+## Solved Bugs
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+1. 
+2. 
+3. 
+4. 
 
----
+## Unresolved Bugs
 
-Happy coding!
+1. 
+2. 
+3. 
+4. 
+
+## Validator Testing
+
+![Validator]
+
+# Deployment
+
+# Credits 
+1. 
+2. 
+3. 
+4. 
+
+# Acknowledgement
