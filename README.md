@@ -25,6 +25,9 @@ This is a classic Battleships game with 1 player only against the computer. I ha
 2. 
 3. 
 
+# Technologies
+For this project I have been working in the IDE VSCode and Codeanywhere.
+
 # Testing
 
 ![Testing]
