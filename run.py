@@ -1,3 +1,5 @@
+import platform
+import subprocess
 import random
 
 
@@ -13,30 +15,36 @@ def create_board(rows, cols):
     return board
 
 
-def print_board(board, game_over=False, num_ships=None):
+def clear_screen():
+    if platform.system() == "Windows":
+        if platform.release() in {"10", "11"}:
+            subprocess.run("", shell=True)
+            print("\033c", end="")
+        else:
+            subprocess.run(["cls"])
+    else:
+        print("\033c", end="")
+
+
+def print_board(board, game_over=False):
     """
     prints the game board grid
-    displays hits, misses, and revealed hidden ships
+    displays hits, misses and revealed hidden ships
     """
-    cols = len(board), len(board[0])
-    print(grid_reference(cols))
+    print(grid_reference(len(board[0])))
 
     for i, row in enumerate(board):
-        display_row = [grid_reference(1, i + 1)]
+        display_row = ['O']
         for cell in row:
             if cell == 'S' and not game_over:
                 display_row.append('O')
             else:
                 display_row.append(cell)
-        print(" ".join(display_row))
+        print(f"{i + 1:2} {' '.join(display_row)}")
 
 
-def grid_reference(cols, row_number=None):
-    letters = 'ABCDEFGHIJ'
-    if row_number is None:
-        return "  " + " ".join(letters[:cols])
-    else:
-        return f"{row_number:2}"
+def grid_reference(cols):
+    return "  " + " ".join(chr(65 + i) for i in range(cols))
 
 
 def place_ship(board, ship_size):
@@ -47,7 +55,6 @@ def place_ship(board, ship_size):
     """
     rows, cols = len(board), len(board[0])
     orientation = random.choice(['horizontal', 'vertical'])
-    ship_size = random.randint(1, 4)
     row, col = random.randint(0, rows - 1), random.randint(0, cols - 1)
 
     for i in range(ship_size):
@@ -70,6 +77,7 @@ def get_guess(rows, cols):
             col, row = ord(guess[0]) - ord('A'), int(guess[1:]) - 1
             if 0 <= row < rows and 0 <= col < cols:
                 return row, col
+
             else:
                 print("Invalid guess. Try again. \n")
         except (ValueError, IndexError, TypeError):
@@ -96,20 +104,21 @@ def play_battleship(rows, cols, num_ships):
     while attempts < max_attempts:
         attempts += 1
         row, col = get_guess(rows, cols)
+        clear_screen()
 
         if board[row][col] == 'S':
-            print("Hit! \n")
+            print("Hit!")
             board[row][col] = 'X'
             num_ships -= 1
             print_board(board)
 
             if num_ships == 0:
                 print("Good job! You sank all the battleships! \n")
-                print_board(board, game_over=True, num_ships=num_ships)
+                print_board(board, game_over=True)
                 break
         else:
             print("Miss!")
-            board[row][col] = ':'
+            board[row][col] = '/'
             print_board(board)
     else:
         print("Game Over! Try again. \n")
