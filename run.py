@@ -2,6 +2,15 @@ import platform
 import subprocess
 import random
 
+# TO DO
+# - cleaning up cell refernces
+# - welcome/game rules 
+# - show hidden ships (Game over)
+# - number of ships
+# - maximum attempts
+# - different files 
+
+
 
 def create_board(rows, cols):
     """
