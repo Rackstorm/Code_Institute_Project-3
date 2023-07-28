@@ -18,7 +18,7 @@ def print_board(board, game_over=False, num_ships=None):
     prints the game board grid
     displays hits, misses, and revealed hidden ships
     """
-    rows, cols = len(board), len(board[0])  # Corrected the assignment
+    cols = len(board), len(board[0])
     print(grid_reference(cols))
 
     for i, row in enumerate(board):
