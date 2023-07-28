@@ -18,10 +18,11 @@ def print_board(board, game_over=False):
     prints the game board grid
     displays hits, misses and revealed hidden ships
     """
-    print(grid_reference(len(board[0])))
+    rows, cols = len(board), len(board[0])
+    print(grid_reference(rows, cols))
 
     for i, row in enumerate(board):
-        display_row = [grid_reference(1)[i]]
+        display_row = [grid_reference(rows, 1)[i]]
         for cell in row:
             if cell == 'S' and not game_over:
                 display_row.append('O')
