@@ -15,23 +15,17 @@ def create_board(rows, cols):
 
 def print_board(board):
     """
-    prints the game board
+    prints the game board as well 
+    displays hits, misses and revealed hidden ships 
     """
 
-
-def print_board(board, game_over=False):
     for row in board:
         display_row = []
         for cell in row:
             if cell == 'S' and not game_over:
-                display_row.append('O')  # Hidden cells during the game
-            elif cell == 'X':
-                display_row.append('X')  # Hits
-            elif cell == ':':
-                display_row.append('&#248;')  # Misses
+                display_row.append('O') 
             else:
-                # Hidden cells after the game (reveal hidden ships)
-                display_row.append('O')
+                display_row.append(cell)  
         print(" ".join(display_row))
 
 
@@ -83,16 +77,17 @@ def play_battleship(rows, cols, num_ships):
     print("You have 5 attempts to try and sink the battleships!")
     print_board(board)
 
-    attempts, max_attempts = 0, 5  # Initialize attempts and max_attempts
+    attempts, max_attempts = 0, 5 
 
     while attempts < max_attempts:
-        # ... (unchanged)
-
+""" 
+if player wins, print first statement 
+if player looses, show hidden ships and print second statement 
+"""
         if num_ships == 0:
             print("Good job! You sank all the battleships!")
-            # Show hidden ships after the game
             print_board(board, game_over=True)
-            break  # Exit the loop when all ships are sunk
+            break  
         else:
             print("Game Over! Try again.")
 
