@@ -13,16 +13,16 @@ def create_board(rows, cols):
     return board
 
 
-def print_board(board, game_over=False):
+def print_board(board, game_over=False, num_ships=None):
     """
     prints the game board grid
-    displays hits, misses and revealed hidden ships
+    displays hits, misses, and revealed hidden ships
     """
-    rows, cols = len(board), len(board[0])
-    print(grid_reference(rows, cols))
+    rows, cols = len(board), len(board[0])  # Corrected the assignment
+    print(grid_reference(cols))
 
     for i, row in enumerate(board):
-        display_row = [grid_reference(rows, 1)[i]]
+        display_row = [grid_reference(1, i + 1)]
         for cell in row:
             if cell == 'S' and not game_over:
                 display_row.append('O')
@@ -31,9 +31,12 @@ def print_board(board, game_over=False):
         print(" ".join(display_row))
 
 
-def grid_reference(cols):
+def grid_reference(cols, row_number=None):
     letters = 'ABCDEFGHIJ'
-    return "  " + " ".join(letters[:cols])
+    if row_number is None:
+        return "  " + " ".join(letters[:cols])
+    else:
+        return f"{row_number:2}"
 
 
 def place_ship(board, ship_size):
@@ -102,7 +105,7 @@ def play_battleship(rows, cols, num_ships):
 
             if num_ships == 0:
                 print("Good job! You sank all the battleships! \n")
-                print_board(board, game_over=True)
+                print_board(board, game_over=True, num_ships=num_ships)
                 break
         else:
             print("Miss!")
