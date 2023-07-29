@@ -131,7 +131,7 @@ def play_battleship(rows, cols, num_ships):
             board[row][col] = '/'
             print_board(board)
     else:
-        print(" ")
+        print("")
         print("Game Over! \n")
         print("Here are the hidden ships: \n")
         print_board(board, game_over=True)
