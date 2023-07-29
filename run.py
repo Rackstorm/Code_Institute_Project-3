@@ -144,7 +144,6 @@ def start_battleship():
     play_battleship(rows, cols, num_ships)
     
 
-
 def display_game_rules():
     print("=== Battleship Game Rules === \n")
     print("In this very simple game you only have to strike down the ships.\n")
