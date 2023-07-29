@@ -9,6 +9,7 @@ import random
 # - number of ships
 # - maximum attempts
 # - different files
+# - Deployment
 
 
 def create_board(rows, cols):
@@ -42,13 +43,13 @@ def print_board(board, game_over=False):
     print(grid_reference(len(board[0])))
 
     for i, row in enumerate(board):
-        display_row = ['O']
+        display_row = [str(i + 1).rjust(2)]
         for cell in row:
             if cell == 'S' and not game_over:
                 display_row.append('O')
             else:
                 display_row.append(cell)
-        print(f"{i + 1:2} {' '.join(display_row)}")
+        print(" ".join(display_row))
 
 
 def grid_reference(cols):
@@ -106,7 +107,7 @@ def play_battleship(rows, cols, num_ships):
     print("You have 5 attempts to try and sink the battleships! \n")
     print_board(board)
 
-    attempts, max_attempts = 0, 5
+    attempts, max_attempts = 0, 80
 
     while attempts < max_attempts:
         attempts += 1
@@ -120,7 +121,9 @@ def play_battleship(rows, cols, num_ships):
             print_board(board)
 
             if num_ships == 0:
-                print("Good job! You sank all the battleships! \n")
+                print("Good job! \n")
+                print("You sank all the battleships! \n")
+                print("You made it in {attempts} attempts. \n")
                 print_board(board, game_over=True)
                 break
         else:
@@ -158,6 +161,7 @@ def main():
         print("3. Exit \n")
 
         choice = input("Enter your choice: ")
+        clear_screen()
 
         if choice == '1':
             start_battleship()
