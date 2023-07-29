@@ -107,9 +107,10 @@ def play_battleship(rows, cols, num_ships):
 
     print("Welcome to Battleship! \n")
     print("You have 5 attempts to try and sink the battleships! \n")
+    clear_screen()
     print_board(board)
 
-    attempts, max_attempts = 0, 5
+    attempts, max_attempts = 0, 20
 
     while attempts < max_attempts:
         attempts += 1
@@ -132,6 +133,8 @@ def play_battleship(rows, cols, num_ships):
             print_board(board)
     else:
         print("Game Over! Try again. \n")
+        print("Here are the hidden ships: \n")
+        print_board(board, game_over=True)
 
 
 def display_game_rules():

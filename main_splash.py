@@ -1,4 +1,4 @@
-from game_functions import start_battleship, display_game_rules
+from game_functions import start_battleship, display_game_rules, clear_screen
 
 
 def display_game_menu():
@@ -12,6 +12,7 @@ def display_game_menu():
         print("3. Exit \n")
 
         choice = input("Enter your choice: ")
+        clear_screen()
 
         if choice == '1':
             start_battleship()
