@@ -16,6 +16,9 @@ def create_board(rows, cols):
 
 
 def clear_screen():
+    """
+    clearing screen for both windows/os users when called in other functions
+    """
     if platform.system() == "Windows":
         if platform.release() in {"10", "11"}:
             subprocess.run("", shell=True)
@@ -44,15 +47,16 @@ def print_board(board, game_over=False):
 
 
 def grid_reference(cols):
+    """ displaying letters and numbers horizontally/vertically on game grid """
     letters = 'ABCDEFGHIJ'
     return "   " + " ".join(letters[:cols])
 
 
 def place_ship(board, ship_size):
     """
-    randomly places a ship on the board.
-    size can differ from 1 to 4.
-    ships can be placed horizontally or vertically.
+    randomly places a ship on the board
+    size can differ from 1 to 4
+    ships can be placed horizontally or vertically
     """
     rows, cols = len(board), len(board[0])
     orientation = random.choice(['horizontal', 'vertical'])
@@ -86,6 +90,11 @@ def get_guess(rows, cols):
 def play_battleship(rows, cols, num_ships):
     """
     main function to play the game
+    placing ships on board
+    stating max attempts
+    marking cells with O, X or /
+    clearing screen after each try
+    printing hidden ships if game over
     """
     board = create_board(rows, cols)
     ships_placed = 0
@@ -124,7 +133,11 @@ def play_battleship(rows, cols, num_ships):
 
 
 def start_battleship():
-    rows, cols = 10, 10
-    num_ships = 5
+    """
+    choosing size and number of ships
+    calling the main game function
+    """
+    rows, cols = 5, 5
+    num_ships = 7
     play_battleship(rows, cols, num_ships)
     clear_screen()
