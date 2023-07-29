@@ -1,6 +1,6 @@
 # Battleships Game
 
-![Mockup]
+![Mockup](docs/readme_images/mockup.png)
 
 This is a classic Battleships game with 1 player only against the computer. I had fun making this game, however, due to the issues with Codeanywhere I partly had to work on this code offline in VS Code.
 
@@ -15,9 +15,47 @@ This is a classic Battleships game with 1 player only against the computer. I ha
 
 ## Features
 
-1. 
-2. 
-3. 
+### The Game
+![Game](docs/readme_images/game.png)
+1. Heading at the top displaying the game name.
+2. User gets to choose to either play game, read game rules or exit the app.
+
+### Game Rules
+![GameRules](docs/readme_images/game_rules.png)
+1. Displaying a list of rules on how to play the game.
+2. The user can then choose another option in the menu.
+
+### Exit
+![Exit](docs/readme_images/exit.png)
+1. If the user chooses "Exit" the entire game shuts down.
+
+### Play Game - Enter guess
+![EnterGuess](docs/readme_images/enter_guess.png)
+User input their guess in the Terminal by printing 'B6' for example.
+
+### Play Game - Hit
+![Hit](docs/readme_images/hit.png)
+If user strikes a battleship, an X will be visible on the board.
+
+### Play Game - Miss
+![Miss](docs/readme_images/miss.png)
+If user strikes a battleship, an X will be visible on the board.
+
+### Play Game - Invalid Guess
+![InvalidGuess](docs/readme_images/invalid_guess.png)
+If user types in number before letter, typing other symbols, letters or numbers, or trying to go off grid an 'Invalid Guess' statement will appear, asking the user to provide a new input.
+
+### Play Game - Keep Track
+![KeepTrack](docs/readme_images/keep_track.png)
+Throughout the game, the score will remain until user wins or it's game over.
+
+### Play Game - Game Over
+![GameOver](docs/readme_images/game_over.png)
+If the user looses, a print statement with "Game Over" will appear along with the board showing the remaining hidden ships. The user will then be asked to try again or choose another option from the menu.
+
+### Play Game - Winner!
+![Winner](docs/readme_images/winner.png)
+If the user wins, a print statement with "Good job, you won!" will appear along with the board showing the score. The user will then be asked to play again or choose another option from the menu.
 
 ## Future features
 

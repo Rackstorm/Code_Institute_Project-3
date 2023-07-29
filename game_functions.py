@@ -125,6 +125,7 @@ def play_battleship(rows, cols, num_ships):
             if num_ships == 0:
                 print("Good job! You sank all the battleships! \n")
                 print_board(board, game_over=True)
+                print("\n Want another go? \n")
                 break
         else:
             print("Miss!")
