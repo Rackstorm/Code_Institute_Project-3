@@ -3,9 +3,6 @@ import subprocess
 import random
 
 # TO DO
-# - cleaning up cell refernces
-# - welcome/game rules
-# - show hidden ships (Game over)
 # - number of ships
 # - maximum attempts
 # - different files
@@ -135,14 +132,13 @@ def play_battleship(rows, cols, num_ships):
         print("\n Game Over! Showing all hidden ships. \n")
         print_board(board, game_over=True)
         print("\n Want another go? \n")
-        
 
 
 def start_battleship():
     rows, cols = 10, 10
     num_ships = 3
     play_battleship(rows, cols, num_ships)
-    
+
 
 def display_game_rules():
     print("=== Battleship Game Rules === \n")
