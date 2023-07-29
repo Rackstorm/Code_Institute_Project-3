@@ -47,7 +47,9 @@ def print_board(board, game_over=False):
 
 
 def grid_reference(cols):
-    """ displaying letters and numbers horizontally/vertically on game grid """
+    """
+    displaying letters and numbers horizontally/vertically on game grid
+    """
     letters = 'ABCDEFGHIJ'
     return "   " + " ".join(letters[:cols])
 
@@ -92,7 +94,7 @@ def play_battleship(rows, cols, num_ships):
     main function to play the game
     placing ships on board
     stating max attempts
-    marking cells with O, X or /
+    marking cells with O, X, or /
     clearing screen after each try
     printing hidden ships if game over
     """
@@ -132,10 +134,24 @@ def play_battleship(rows, cols, num_ships):
         print("Game Over! Try again. \n")
 
 
+def display_game_rules():
+    """
+    Displaying the rules of the game.
+    """
+    print("=== Battleship Game Rules === \n")
+    print("In this very simple game you only have to strike down the ships.\n")
+    print("1. You have 20 attempts/bullets to sink the ships.")
+    print("2. You enter your guess by typing col + row (e.g. A3)")
+    print("3. If you miss, the board will mark the cell with a '/'")
+    print("4. If you hit, the board will mark the cell with an 'X'")
+    print("5. If you run out of attempts/bullets, it's game over.")
+    print("6. Good luck!\n")
+
+
 def start_battleship():
     """
-    choosing size and number of ships
-    calling the main game function
+    Choosing size and number of ships.
+    Calling the main game function.
     """
     rows, cols = 5, 5
     num_ships = 7
