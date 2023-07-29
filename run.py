@@ -53,7 +53,8 @@ def print_board(board, game_over=False):
 
 
 def grid_reference(cols):
-    return "   " + " ".join(chr(65 + i) for i in range(cols + 1))
+    letters = 'ABCDEFGHIJ'
+    return "   " + " ".join(letters[:cols])
 
 
 def place_ship(board, ship_size):
@@ -135,7 +136,7 @@ def play_battleship(rows, cols, num_ships):
 
 
 def start_battleship():
-    rows, cols = 10, 9
+    rows, cols = 10, 10
     num_ships = 80
     play_battleship(rows, cols, num_ships)
     clear_screen()
