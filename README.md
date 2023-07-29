@@ -21,9 +21,8 @@ This is a classic Battleships game with 1 player only against the computer. I ha
 
 ## Future features
 
-1. 
-2. 
-3. 
+1. Creating a multiplayer version
+2. Making the game more interactive by letting the player put their own ships on the board
 
 # Technologies
 For this project I have been working in the IDE VSCode and Codeanywhere.
@@ -53,9 +52,9 @@ For this project I have been working in the IDE VSCode and Codeanywhere.
 # Deployment
 
 # Credits 
-1. 
-2. 
-3. 
+1. Some code have been used and modified from [Saran Sundars Battleship for Beginners](https://github.com/SaranSundar/PythonCurriculum/blob/main/Battleships/battleships_complete.py)
+2. Simplistic code and functionality has been inspired from [Saran Sundars Battleship for beginners](https://www.youtube.com/watch?v=MgJBgnsDcF0)
+3. Borrowing code and modified it from [Code Academy](https://www.youtube.com/watch?v=7Ki_2gr0rsE)
 4. 
 
 # Acknowledgement
