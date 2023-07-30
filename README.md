@@ -4,6 +4,9 @@
 
 This is a classic Battleships game with 1 player only against the computer. I had fun making this game, however, due to the issues with Codeanywhere I partly had to work on this code offline in VS Code.
 
+* The project repository can be found here https://github.com/Rackstorm/Code_Institute_Project-3
+* The project is deployed, live and playable at https://code-project-3-e97f40034e15.herokuapp.com/
+
 ## How to Play
 1. The game board is set up with a grid of 5x5.
 2. 7 ships is placed on the board.
