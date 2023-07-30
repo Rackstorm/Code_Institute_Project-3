@@ -98,6 +98,8 @@ Throughout this project I have been testing the game by running it in the Termin
 
 **8. Maximum attempts** - The board was clearing after the maximum attempts instead of printing "Game Over." Solved this by modifying the play_battleship() function to print "Game Over" when the maximum attempts were reached, and then we displayed the board with hidden ships.
 
+**9. Ships not displaying on the board** - The loop for placing ships was not correct, leading to not all ships being placed on the board. Adjusted the loop by modifying the place_ship function to properly check for valid ship placements and ensuring that each ship is placed without overlapping any other ship.
+
 ## Unresolved Bugs
 
 1. No unresolved bugs.
