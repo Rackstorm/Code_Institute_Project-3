@@ -90,7 +90,7 @@ If the user wins, a print statement with "Good job, you won!" will appear along 
 # Testing
 
 Throughout this project I have been testing the game by running it in the Terminal. 
-![Testing]
+![Testing](docs/readme_images/testing.png)
 
 ## Solved Bugs
 
