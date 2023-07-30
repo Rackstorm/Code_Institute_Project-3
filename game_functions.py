@@ -159,5 +159,5 @@ def start_battleship():
     Calling the main game function.
     """
     rows, cols = 5, 5
-    num_ships = 7
+    num_ships = 15
     play_battleship(rows, cols, num_ships)
