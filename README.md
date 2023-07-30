@@ -5,13 +5,15 @@
 This is a classic Battleships game with 1 player only against the computer. I had fun making this game, however, due to the issues with Codeanywhere I partly had to work on this code offline in VS Code.
 
 ## How to Play
-1. The game board is set up with a grid of 10x10.
-2. 4 ships is placed on the board.
+1. The game board is set up with a grid of 5x5.
+2. 7 ships is placed on the board.
 3. The player inputs their guess by writing rows + column (e.g. "A6" or "C3")
-4. The player has 50 attempts/bullets to strike down the battleships.
+4. The player has 20 attempts/bullets to strike down the battleships.
 5. If the player runs out of attempts the game will close and show "Game over!".
 6. If the player wins the game will show "Good job! You won!"
 
+## Design of the Game
+![LucidChart](docs/readme_images/lucid.png)
 
 ## Features
 
@@ -75,9 +77,8 @@ If the user wins, a print statement with "Good job, you won!" will appear along 
 
 # Testing
 
-![Testing]
-
 Throughout this project I have been testing the game by running it in the Terminal. 
+![Testing]
 
 ## Solved Bugs
 
@@ -109,6 +110,17 @@ Code has been run through the Code Institutes Linter with no errors.
 ![GameFunctions](docs/readme_images/game_functions_linter.png)
 
 # Deployment
+
+## Adding, committing and pushing code
+
+- All code has been pushed to the repository https://github.com/Rackstorm/Code_Institute_Project-3
+- All code has been regurlary added, committed and pushed throughout the project.
+- The commands being used are `git add <file>`,
+  `git commit -m “commit message”` and
+  `git push`
+- Due to being completely brand new into this tech world, the `git commit -m “commit message”` have gradually improved throughout this project since it was difficult for me to understand the importance of good logging in the beginning.
+
+## Deploying to Heroku
 I deployed my project directly to Heroku by doing the following:
 
 1. Created an account at Heroku.com.
