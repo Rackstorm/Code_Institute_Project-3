@@ -9,11 +9,11 @@ This is a classic Battleships game with 1 player only against the computer. I ha
 
 ## How to Play
 1. The game board is set up with a grid of 5x5.
-2. 7 ships is placed on the board.
+2. 7 enemy ships is placed randomly on the board.
 3. The player inputs their guess by writing rows + column (e.g. "A6" or "C3")
 4. The player has 20 attempts/bullets to strike down the battleships.
-5. If the player runs out of attempts the game will close and show "Game over!".
-6. If the player wins the game will show "Good job! You won!"
+5. If the player runs out of attempts the game will close and show "Game over! Try again!" and show hidden ships.
+6. If the player wins the game will show "Good job! You won!" and ask user to play again.
 
 ## Design of the Game
 ![LucidChart](docs/readme_images/lucid.png)
