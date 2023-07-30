@@ -59,17 +59,53 @@ def place_ship(board, ship_size):
     randomly places a ship on the board
     size can differ from 1 to 4
     ships can be placed horizontally or vertically
+    ensuring the ships cannot be placed on top of eachother
+    checking ship placement possible in for loop
     """
     rows, cols = len(board), len(board[0])
-    orientation = random.choice(['horizontal', 'vertical'])
-    row, col = random.randint(0, rows - 1), random.randint(0, cols - 1)
+    placed_positions = []
+    ships_placed = 0
 
-    for i in range(ship_size):
-        if orientation == 'horizontal' and col + ship_size <= cols:
-            board[row][col + i] = 'S'
-        elif orientation == 'vertical' and row + ship_size <= rows:
-            board[row + i][col] = 'S'
-            break
+    while ships_placed < 7:
+        orientation = random.choice(['horizontal', 'vertical'])
+        row, col = random.randint(0, rows - 1), random.randint(0, cols - 1)
+
+        valid_placement = False
+        pos_check = []
+
+        for i in range(ship_size):
+            if orientation == 'horizontal' and col + ship_size <= cols:
+                if board[row][col + i] != 'S':
+                    valid_placement = True
+                    pos_check.append((row, col + i))
+                else:
+                    valid_placement = False
+                    break
+            elif orientation == 'vertical' and row + ship_size <= rows:
+                if board[row + i][col] != 'S':
+                    valid_placement = True
+                    pos_check.append((row + i, col))
+                else:
+                    valid_placement = False
+                    break
+            else:
+                valid_placement = False
+                break
+
+        position_not_placed = all(
+            pos not in placed_positions for pos in pos_check
+        )
+        if valid_placement and position_not_placed:
+            if orientation == 'horizontal':
+                for i in range(ship_size):
+                    board[row][col + i] = 'S'
+            else:
+                for i in range(ship_size):
+                    board[row + i][col] = 'S'
+            placed_positions.extend(pos_check)
+            ships_placed += 1
+        else:
+            ships_placed += 1
 
 
 def get_guess(rows, cols):
@@ -100,6 +136,11 @@ def play_battleship(rows, cols, num_ships):
     """
     board = create_board(rows, cols)
     ships_placed = 0
+
+    place_ship(board, 1)
+    place_ship(board, 2)
+    place_ship(board, 3)
+    place_ship(board, 4)
 
     while ships_placed < num_ships:
         place_ship(board, random.randint(1, 4))
@@ -159,5 +200,5 @@ def start_battleship():
     Calling the main game function.
     """
     rows, cols = 5, 5
-    num_ships = 15
+    num_ships = 7
     play_battleship(rows, cols, num_ships)
