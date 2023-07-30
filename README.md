@@ -20,48 +20,57 @@ This is a classic Battleships game with 1 player only against the computer. I ha
 
 ## Features
 
-![Game](docs/readme_images/game.png)
 ### The Game
 1. Heading at the top displaying the game name.
 2. User gets to choose to either play game, read game rules or exit the app.
+![Game](docs/readme_images/game.png)
 
-![GameRules](docs/readme_images/game_rules.png)
+
 ### Game Rules
 1. Displaying a list of rules on how to play the game.
 2. The user can then choose another option in the menu.
+![GameRules](docs/readme_images/game_rules.png)
 
 
-![Exit](docs/readme_images/exit.png)
+
 ### Exit
-1. If the user chooses "Exit" the entire game shuts down.
+If the user chooses "Exit" the entire game shuts down.
+![Exit](docs/readme_images/exit.png)
 
-![EnterGuess](docs/readme_images/enter_guess.png)
+
 ### Play Game - Enter guess
 User input their guess in the Terminal by printing 'B6' for example.
+![EnterGuess](docs/readme_images/enter_guess.png)
 
-![Hit](docs/readme_images/hit.png)
+
 ### Play Game - Hit
 If user strikes a battleship, an X will be visible on the board.
+![Hit](docs/readme_images/hit.png)
 
-![Miss](docs/readme_images/miss.png)
+
 ### Play Game - Miss
 If user strikes a battleship, an X will be visible on the board.
+![Miss](docs/readme_images/miss.png)
 
-![InvalidGuess](docs/readme_images/invalid_guess.png)
+
 ### Play Game - Invalid Guess
 If user types in number before letter, typing other symbols, letters or numbers, or trying to go off grid an 'Invalid Guess' statement will appear, asking the user to provide a new input.
+![InvalidGuess](docs/readme_images/invalid_guess.png)
 
-![KeepTrack](docs/readme_images/keep_track.png)
+
 ### Play Game - Keep Track
 Throughout the game, the score will remain until user wins or it's game over.
+![KeepTrack](docs/readme_images/keep_track.png)
 
-![GameOver](docs/readme_images/game_over.png)
+
 ### Play Game - Game Over
 If the user looses, a print statement with "Game Over" will appear along with the board showing the remaining hidden ships. The user will then be asked to try again or choose another option from the menu.
+![GameOver](docs/readme_images/game_over.png)
 
-![Winner](docs/readme_images/winner.png)
+
 ### Play Game - Winner!
 If the user wins, a print statement with "Good job, you won!" will appear along with the board showing the score. The user will then be asked to play again or choose another option from the menu.
+![Winner](docs/readme_images/winner.png)
 
 ## Future features
 
