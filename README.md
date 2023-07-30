@@ -64,11 +64,14 @@ If the user wins, a print statement with "Good job, you won!" will appear along 
 2. Making the game more interactive by letting the player put their own ships on the board
 
 # Technologies
-For this project I have been working with:
-1. IDE - VSCode and Codeanywhere.
-2. Python - Creating the game.
-3. Checking the game throughout the process in the Terminal.
-4. Tried to deploy to Heroku.
+
+* The game is completely written in Python.
+* The IDE used has been Codeanywhere with Code Institutes template.
+* The IDE used when Codeanywhere has been buggy is VSCode.
+* Heroku has been used to deploy the project.
+* Git has been used to regularly adding, committing and pushing code to GitHub.
+* All code and assets have been stored at GitHub.
+* The project has also been deployed to Git Pages.
 
 # Testing
 
